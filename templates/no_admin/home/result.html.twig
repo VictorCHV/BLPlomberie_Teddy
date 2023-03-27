@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Liste Chantiers B&L {% endblock %}
+
+{% block body %}
+    <h1> {%block pageTitle %} Jetez un oeil à nos réalisations : {% endblock %} </h1>
+    <hr/>
+
+            <nav>
+            <a href="{{ path ('app_NoAdmin_home_search') }}"> Rechercher </a>
+        </nav>
+
+    {% block subTitle %} {% endblock %}
+
+
+    {% for worksite in worksites %}
+    <div>
+        <h2> Nom du chantier : {{worksite.title}} </h2>
+
+        {% if worksite.imageFilename %}
+        <p>              
+        {# <img src="{{ worksite.imageFilename }}" alt="{{ worksite.title }}" /> #}
+        <img src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
+        {% endif %}
+        </p>
+
+        <h4> Catégorie : {{ worksite.category.name }} </h4>
+
+    </div>
+
+    <hr/>         
+
+     {% endfor %} 
+
+
+{% endblock %}

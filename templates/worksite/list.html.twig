@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Admin Liste des Chantiers{% endblock %}
+
+{% block body %}
+    <h1> {%block pageTitle %} Repère {% endblock %} </h1>
+    <hr/>
+
+    <h1> Interface chantiers </h1>
+    <nav>
+    <a href="{{ path('app_worksite_create') }}"> Ajouter un chantier</a>
+    </nav>
+
+    {% block subTitle %} {% endblock %}
+
+    {% for worksite in worksites %}
+        <div>
+            <h2> Titre : {{ worksite.title }} </h2>        
+
+            <p> Description : {{ worksite.description }}</p>
+
+            {% if worksite.imageFilename %}
+            <p>              
+            {# <img src="{{ worksite.imageFilename }}" alt="{{ worksite.title }}" /> #}
+            <img src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
+            {% endif %}
+            </p>
+
+            <h4> Catégorie : {{ worksite.category.name }} </h4>
+            
+            <a href="{{ path('app_worksite_update' , {id: worksite.id})}}"> Modifier</a>
+            <a href="{{ path('app_worksite_remove' , {id: worksite.id})}}"> Supprimer</a>
+         
+        </div>
+    {% endfor %}
+{% endblock %}
