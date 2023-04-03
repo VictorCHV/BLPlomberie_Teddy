@@ -12,9 +12,9 @@ class SearchWorksiteCriteria
 
     public ?string $orderBy= 'title';
 
-    public ?string $direction = 'ASC';
+    public ?string $direction = 'DESC';
 
-    public ?int  $limit= 15;
+    public ?int  $limit= 50;
 
     public ?int $page=1;
 }

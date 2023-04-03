@@ -3,29 +3,26 @@
 {% block title %} Liste Chantiers B&L {% endblock %}
 
 {% block body %}
-    <h1> {%block pageTitle %} Jetez un oeil à nos réalisations : {% endblock %} </h1>
-    <hr/>
-
-            <nav>
-            <a href="{{ path ('app_NoAdmin_home_search') }}"> Rechercher </a>
-        </nav>
+    <h2> {%block pageTitle %} Galerie de nos chantiers  {% endblock %} </h2>
+    <div class="SearchButton">
+            <a href="{{ path ('app_NoAdmin_home_search') }}"> Recherche par catégorie : </a>
+    </div>
 
     {% block subTitle %} {% endblock %}
 
 
     {% for worksite in worksites %}
     <div>
-        <h2> Nom du chantier : {{worksite.title}} </h2>
+        <h4> {{worksite.title}} </h4> {# Nom du chantier #}
+        <h5> Catégorie : {{ worksite.category.name }} </h5>
+        <p class="description"> {{worksite.description}} </p>{# Description du chantier #}
 
         {% if worksite.imageFilename %}
         <p>              
-        {# <img src="{{ worksite.imageFilename }}" alt="{{ worksite.title }}" /> #}
         <img src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
         {% endif %}
         </p>
-
-        <h4> Catégorie : {{ worksite.category.name }} </h4>
-
+        
     </div>
 
     <hr/>         

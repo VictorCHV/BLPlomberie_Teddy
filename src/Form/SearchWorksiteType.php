@@ -18,45 +18,47 @@ class SearchWorksiteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title', TextType::class, [
-                'label' => 'Titre du chantier : ',
-                'required' => false,
-            ])
-            ->add('categories', EntityType::class, [
-                'label'=> 'Catégorie : ',
-                'class' => Category::class,
-                'choice_label' => 'name',
-                'multiple' => true,
-                'expanded' => true,
-                'required' => false,
-            ])
-            ->add('orderBy', ChoiceType::class, [
-                'choices' => [
-                    'Identifiant' => 'id',
-                    'Titre' => 'title',
-                ],
-                'required' => true,
-                'label' => 'Trier par : ',
-            ])
-            ->add('direction', ChoiceType::class, [
-                'choices'  => [
-                    'Croissant' => 'ASC',
-                    'Décroissant' => 'DESC',
-                 ],
-                 'required' => true,
-                 'label' => 'Sens du tri : ',
-            ])
-            ->add('limit', NumberType::class, [
-                'required' => true,
-                'label' => 'Nombre de résultats : ',
-            ])
-            ->add('page', NumberType::class, [
-                'required' => true,
-                'label' => 'Page : ',
+        ->add('categories', EntityType::class, [
+            'label'=> 'Catégorie : ',
+            'class' => Category::class,
+            'choice_label' => 'name',
+            'multiple' => true,
+            'expanded' => true,
+            'required' => false,
             ])
 
+            // ->add('title', TextType::class, [
+            //     'label' => 'Titre du chantier : ',
+            //     'required' => false,
+            // ])
+
+            // ->add('orderBy', ChoiceType::class, [
+            //     'choices' => [
+            //         'Identifiant' => 'id',
+            //         'Titre' => 'title',
+            //     ],
+            //     'required' => true,
+            //     'label' => 'Trier par : ',
+            // ])
+            // ->add('direction', ChoiceType::class, [
+            //     'choices'  => [
+            //         'Croissant' => 'ASC',
+            //         'Décroissant' => 'DESC',
+            //      ],
+            //      'required' => true,
+            //      'label' => 'Sens du tri : ',
+            // ])
+            // ->add('limit', NumberType::class, [
+            //     'required' => true,
+            //     'label' => 'Nombre de résultats : ',
+            // ])
+            // ->add('page', NumberType::class, [
+            //     'required' => true,
+            //     'label' => 'Page : ',
+            // ])
+
             ->add('send', SubmitType::class, [
-                'label' => "Envoyer",
+                'label' => "Lancer la recherche",
             ])
         ;
     }

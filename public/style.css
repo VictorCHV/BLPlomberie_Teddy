@@ -1,0 +1,235 @@
+:root {
+    --black: #141929;
+    --blue: #5593c9;
+    --darkblue: #217bc9;
+    --white: #ffffff;
+    --grey: #e2e9e9;
+    --orange: #e48613;
+}
+
+body, html {
+    margin: 0em 1em 0em 1em;
+    padding: 0; 
+    font-size: 20px;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--grey);
+    color: var(--black);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid var(--white);
+    z-index: 10;
+    color:  #ebf7fdba;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.2em 0em 0em 0em;
+}
+
+.logo-container img {
+    width: 120px;
+}
+
+.logo-container h1 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.navbar a {
+    float: left;
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 38px;
+}
+
+.navbar a:hover {
+    background-color: var(--blue);
+}
+
+.hero-unit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    position: relative;
+    margin: 5.2em 0.3em -5.5em 0.3em;
+    z-index: 0;
+}
+
+h2 {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 2.5em;
+    background-color: var(--blue);
+    border: 4px solid var(--blue); 
+    padding: 0.3em; 
+    margin: 3em 2em 0.3em 2em;
+    border-radius: 50px; 
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/images/pipesBig.jpg"); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;   
+}
+
+.services li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--grey);
+    font-size: 2.5em;  
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid var(--blue);
+    padding: 0em 0em 0em 0em; 
+    margin: 1em 2em 0em 2em; 
+}
+
+/* sert notamment pour nom des chantiers */
+h4 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 2em; 
+    color: var(--blue);
+    margin-top: 0.5em;
+    margin-bottom : 0.2em;
+}
+
+h5 {
+    display:flex;
+    font-size: 1.5em; 
+}
+
+/* description du chantier */
+.description {
+    margin: -1.4em 0em 0em 0em;
+    padding: 0;
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    font-size: 1.5em;
+    border: 1.5px solid var(--white);  
+}
+
+/* bouton Rechercher */
+.SearchButton {
+    display: flex;
+    position: relative;
+    font-size: 2.3em;
+}
+
+/* Formulaire de recherche */
+.SearchForm {
+    flex-direction: column;
+    position: relative;
+    font-size: 2em;  
+    border: 1px solid var(--grey);
+    border-radius: 5px 0 0 5px;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espacement entre chaque groupe de checkbox */
+  }
+
+/* bouton Lancer la recherche */
+.SearchForm button {
+    display: flex;
+    font-size: 0.9em;
+    padding: 20px 20px;
+    background-color: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-bottom : 0em;
+    border-radius: 50px;
+}
+
+.SearchForm button[type="submit"]:hover {
+    background-color: var(--darkblue);
+  }
+
+/* Menu du bas */
+.navbarFooter {
+    margin: 0;
+    padding: 0em 2em 0em 2em;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--orange);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--blue);
+}
+
+.navbarFooter a {
+    color: var(--white);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 38px;
+}
+
+/* Informations légales */
+.legal-info {
+    display:flex;
+    justify-content: center;
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    margin: 1em 0em 0em 0em;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.legal-info a {
+    color: var(--black);
+    font-size: 1.6em;
+    text-decoration: none;
+}
+
+.PorteArrière a {
+    display:flex;
+    justify-content: center;
+    color: var(--black);
+    font-size: 0.8em;
+    text-decoration: none;
+}

@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class homeController extends AbstractController
 {
     /**
-     * @Route("/noadmin/accueil" , name="app_NoAdmin_home_home")
+     * @Route("/accueil" , name="app_NoAdmin_home_home")
      */
     public function home(): Response
     {
@@ -64,6 +64,16 @@ class homeController extends AbstractController
         // afficher la page de résultats
         return $this->render('no_admin/home/result.html.twig', [
             'worksites' => $worksites,
+        ]);
+    }
+
+    /**
+     * @Route("/noadmin/home/informations_légales" , name="app_NoAdmin_home_legalInfo")
+     */
+    public function legalInfo(): Response
+    {
+        return $this->render('no_admin/home/InfoLegal.html.twig', [
+            'controller_name' => 'homeController',
         ]);
     }
 

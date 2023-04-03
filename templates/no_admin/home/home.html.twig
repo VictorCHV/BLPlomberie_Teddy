@@ -3,8 +3,37 @@
 {% block title %} Accueil B&L {% endblock %}
 
 {% block body %}
-    <h1> {%block pageTitle %} A votre disposition pour vos projets ou problèmes de plomberie  {% endblock %} </h1>
-    <hr/>
+
+<div class="hero-unit">
+    <img src="/images/HeroBL.jpg" alt="logo"/>
+</div>
+
+<h2> {%block pageTitle %} Bienvenue {% endblock %} </h2>
+
+<p>B&L Plomberie met à votre disposition son savoir-faire pour tous types d'ouvrages de plomberie.
+<br>
+<br>
+Fiables et professionnels, nous intervenons aussi bien pour du dépannage d’urgence
+que pour des prestations en installation ou en rénovation.
+<br>
+<br>
+    <a href="{{ path ('app_NoAdmin_home_showroom') }}"> <strong>Nos Chantiers</strong> </a>
+    : découvrez nos réalisations.
+<br>
+
+<br>  
+<a href="{{ path ('app_NoAdmin_home_services') }}"> <strong>Nos Services</strong> </a>
+: réparation de fuite, remplacement de chauffe-eau, évacuation 
+d’eaux usées, création de salles de bains et de sanitaires, robinetterie etc.
+<br>
+<br> 
+<a href="{{ path ('app_NoAdmin_home_contact') }}"> <strong>Contactez-nous</strong> </a>
+ dès maintenant pour tous vos besoins de plomberie résidentielle ou commerciale.
+<br>
+<br>
+Nous réalisons vos devis gratuitement.</p>
+
+
 
     {% block subTitle %} {% endblock %}
 
