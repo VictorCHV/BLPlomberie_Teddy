@@ -1,4 +1,3 @@
-{% extends 'base.html.twig' %}
 
 {% block title %} Liste Chantiers B&L {% endblock %}
 
@@ -11,8 +10,8 @@
     {% block subTitle %} {% endblock %}
 
 
-    {% for worksite in worksites %}
-    <div>
+    {% for worksite in worksites %}  
+
         <h4> {{worksite.title}} </h4> {# Nom du chantier #}
         <h5> Catégorie : {{ worksite.category.name }} </h5>
         <p class="description"> {{worksite.description}} </p>{# Description du chantier #}

@@ -32,9 +32,9 @@ class WorksiteType extends AbstractType
             'mapped' => false,
             'required' => false,
             ])
-            ->add('videoUrl', UrlType::class, [
-            'label' => 'Vidéo du Chantier '
-            ])
+            // ->add('videoUrl', UrlType::class, [
+            // 'label' => 'Vidéo du Chantier '
+            // ])
 
             ->add('category', EntityType::class, [
                 'label' => 'Choix des catégories',

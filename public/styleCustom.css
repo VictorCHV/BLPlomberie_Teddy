@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*!
+* Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
+*/
+/*!
+ * Bootstrap  v5.2.3 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+ .navbar .navbar-brand .title {
+    background-color: #212529;
+ }
+
+ .header-title {
+    font-size: 4.5rem;
+ }
+
+ .telephone {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+ }
+
+ .infoContact{
+      font-size: 1.3rem;
+      font-style: italic;
+      text-align: center;
+      color: #fff;
+      line-height: 1.5rem;
+      margin-bottom: 25px;
+      font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ }
+
+ .col-lg-4 .portfolio-link img {
+   height: 250px;
+   width : 100%;
+ }
+
+
+
+ 
+
+ 

@@ -1,36 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Notre entreprise de plomberie située à Bordeaux propose des services professionnels pour la réparation et l'installation de tuyauterie, robinetterie et équipements sanitaires, salles de bain. Contactez-nous dès maintenant pour obtenir une estimation gratuite.">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            <link rel="stylesheet" href="/style.css" />
-        {% endblock %}
-
-        {% block javascripts %}
-            {# {{ encore_entry_script_tags('app') }} #}
-        {% endblock %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Notre entreprise de plomberie située à Bordeaux propose des services professionnels pour la réparation et l'installation de tuyauterie, robinetterie et équipements sanitaires, salles de bain. Contactez-nous dès maintenant pour obtenir une estimation gratuite." />
+        <meta name="author" content="" />
+        <title>Agency - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/style.css" rel="stylesheet" />
+        <link href="/styleCustom.css" rel="stylesheet" />
     </head>
-    
-    <body>
-        <header class="header">
-        <div class="logo-container">
-        <img src="/images/LogoSmallBL.png" alt="Logo de B&L">
-        <h1>BL Plomberie</h1>
-        </div>
-        
-        <nav class="navbar">
-            <a href="{{ path ('app_NoAdmin_home_home') }}"> Accueil </a>
-            <a href="{{ path ('app_NoAdmin_home_services') }}"> Services </a>
-            <a href="{{ path ('app_NoAdmin_home_showroom') }}"> Chantiers </a>
-            <a href="{{ path ('app_NoAdmin_home_contact') }}"> Contact </a>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">
+                    <img src="/images/Logo.png" alt="..." />
+                    <span class="title">B&L Plomberie</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Nos Chantiers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <br>
-        <nav>
-            {% if is_granted('ROLE_ADMIN') %}
+
+                <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path ('app_worksite_list') }}"> Interface chantiers </a>
                 <br>
                 <a href="{{ path ('app_category_list') }}" > Interface catégories </a>
@@ -38,26 +49,12 @@
                 <a href="{{ path('app_login') }}"> Connexion Admin </a>
                 <br>
                 <a href="{{ path('app_logout') }}"> Déconnexion Admin </a>
-            {% endif %}
-        </nav>
-        </header>
-        <br>
+                {% endif %}
+            </nav>
 
-        {% block body %}{% endblock %}
+        {% block body %}  {% endblock %}  
 
-        <footer>
-            <div class="navbarFooter">
-                <a href="{{ path ('app_NoAdmin_home_home') }}">Accueil</a>
-                <a href="{{ path ('app_NoAdmin_home_services') }}">Services</a>
-                <a href="{{ path ('app_NoAdmin_home_showroom') }}">Chantiers</a>
-                <a href="{{ path ('app_NoAdmin_home_contact') }}">Contact</a>
-            </div>
-
-            <div class="legal-info">
-            <a href="{{ path ('app_NoAdmin_home_legalInfo') }}">Informations légales</a>
-            </div>
-    
-        </footer>
+        {% block home %}  {% endblock %}  
 
 
     </body>

@@ -9,16 +9,30 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Service\FilterCategory;
 
 class homeController extends AbstractController
 {
     /**
      * @Route("/accueil" , name="app_NoAdmin_home_home")
      */
-    public function home(): Response
+    public function home(WorksiteRepository $repository): Response
     {
+        $listechantier1 = 'test';
+
+        $SalleBain = $repository->findTargetCategory(1);
+        $Wc = $repository->findTargetCategory(2);
+        $Cuisine = $repository->findTargetCategory(3);
+        $Autre = $repository->findTargetCategory(4);
+
+
         return $this->render('no_admin/home/home.html.twig', [
             'controller_name' => 'homeController',
+            'listechantier' => $listechantier1 ,
+            'sallebains' => $SalleBain ,
+            'Wcs' => $Wc ,
+            'cuisines' => $Cuisine ,
+            'autres' => $Autre ,
         ]);
     }
 
@@ -53,19 +67,46 @@ class homeController extends AbstractController
     }
 
 
-    /**
-     * @Route("/noadmin/home/showroom" , name="app_NoAdmin_home_showroom")
-     */
-    public function showroom(WorksiteRepository $repository): Response
-    {
-        // récup les chantiers depuis la BD
-        $worksites= $repository->findAll();
+    // /**
+    //  * @Route("/noadmin/home/showroom" , name="app_NoAdmin_home_showroom")
+    //  */
+    // public function showroom(WorksiteRepository $repository): Response
+    // {
+    //     // récup les chantiers depuis la BD
+    //     $worksites= $repository->findAll();
 
-        // afficher la page de résultats
-        return $this->render('no_admin/home/result.html.twig', [
-            'worksites' => $worksites,
-        ]);
+    //     // afficher la page de résultats
+    //     return $this->render('no_admin/home/result.html.twig', [
+    //         'worksites' => $worksites,
+    //     ]);
+    // }
+
+    // /**
+    //  * @Route("/noadmin/home/showroom" , name="app_NoAdmin_home_showroom")
+    //  */
+    // public function showroom(WorksiteRepository $repository, int $id): Response 
+    // {
+       
+    // $worksites= $repository->findTargetCategory($id);
+       
+    //    return $this->render('no_admin/home/result.html.twig', [
+    //     'worksites' => $worksites,
+    // ]);
+    // }
+
+    /**
+      * @Route("/noadmin/home" , name="app_NoAdmin_home_showroom")
+    */
+    public function FilterCategory(FilterCategory $FilterCategory, WorksiteRepository $repository, int $id)
+    {
+        $twig_variable = 'some value';
+        $result = $FilterCategory->showroom($repository, $id);
+        
+        return $this->render('no_admin/home/home.html.twig', [
+            'twig_variable' => $twig_variable
+    ]);
     }
+ 
 
     /**
      * @Route("/noadmin/home/informations_légales" , name="app_NoAdmin_home_legalInfo")
