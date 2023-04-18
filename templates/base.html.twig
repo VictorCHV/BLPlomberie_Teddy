@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Notre entreprise de plomberie située à Bordeaux propose des services professionnels pour la réparation et l'installation de tuyauterie, robinetterie et équipements sanitaires, salles de bain. Contactez-nous dès maintenant pour obtenir une estimation gratuite." />
+        <meta name="description" content="Notre entreprise de plomberie située à Bordeaux propose des services 
+        professionnels pour la réparation de fuites et l'installation de tuyauterie, robinetterie et équipements 
+        sanitaires, salles de bain. Contactez-nous dès maintenant pour obtenir une estimation gratuite." />
         <meta name="author" content="" />
-        <title>Agency - Start Bootstrap Theme</title>
+        <title>BL Plomberie</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -17,14 +19,18 @@
         <link href="/style.css" rel="stylesheet" />
         <link href="/styleCustom.css" rel="stylesheet" />
     </head>
+    
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
+            <div class="logo-text-container">
                 <a class="navbar-brand" href="#page-top">
                     <img src="/images/Logo.png" alt="..." />
-                    <span class="title">B&L Plomberie</span>
+                    {# <span class="title">BL Plomberie</span> #}
+                    <span class="title">B<span style="color:#FC5050;">L</span> Plomberie</span>
                 </a>
+            </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -33,7 +39,7 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Nos Chantiers</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Nos + </a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -42,20 +48,15 @@
 
                 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
                 {% if is_granted('ROLE_ADMIN') %}
-                <a href="{{ path ('app_worksite_list') }}"> Interface chantiers </a>
-                <br>
-                <a href="{{ path ('app_category_list') }}" > Interface catégories </a>
-                <br>
-                <a href="{{ path('app_login') }}"> Connexion Admin </a>
-                <br>
-                <a href="{{ path('app_logout') }}"> Déconnexion Admin </a>
-                {% endif %}
+                <a href="{{ path ('app_worksite_list') }}" class="menuAdmin-item"> Interface chantiers </a>
+                {# <a href="{{ path ('app_category_list') }}" > Interface catégories </a> #}
+                <a href="{{ path('app_login') }}" class="menuAdmin-item"> Connexion Admin </a>
+                <a href="{{ path('app_logout') }}" class="menuAdmin-item"> Déconnexion Admin </a>
+                {% endif %}             
             </nav>
 
-        {% block body %}  {% endblock %}  
+        {% block body %}{% endblock %}  
 
-        {% block home %}  {% endblock %}  
-
-
+        {# {% block home %}  {% endblock %}   #}
     </body>
 </html>

@@ -46,25 +46,16 @@ class homeController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/noadmin/home/zone_intervention" , name="app_NoAdmin_home_area")
-     */
-    public function area(): Response
-    {
-        return $this->render('no_admin/home/area.html.twig', [
-            'controller_name' => 'homeController',
-        ]);
-    }
 
     /**
      * @Route("/noadmin/home/contact" , name="app_NoAdmin_home_contact")
      */
-    public function contact(): Response
-    {
-        return $this->render('no_admin/home/contact.html.twig', [
-            'controller_name' => 'homeController',
-        ]);
-    }
+    // public function contact(): Response
+    // {
+    //     return $this->render('no_admin/home/contact.html.twig', [
+    //         'controller_name' => 'homeController',
+    //     ]);
+    // }
 
 
     // /**
@@ -111,12 +102,12 @@ class homeController extends AbstractController
     /**
      * @Route("/noadmin/home/informations_légales" , name="app_NoAdmin_home_legalInfo")
      */
-    public function legalInfo(): Response
-    {
-        return $this->render('no_admin/home/InfoLegal.html.twig', [
-            'controller_name' => 'homeController',
-        ]);
-    }
+    // public function legalInfo(): Response
+    // {
+    //     return $this->render('no_admin/home/InfoLegal.html.twig', [
+    //         'controller_name' => 'homeController',
+    //     ]);
+    // }
 
     /**
      * @Route("/noadmin/home/search" , name="app_NoAdmin_home_search")

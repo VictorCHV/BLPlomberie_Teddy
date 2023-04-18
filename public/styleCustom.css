@@ -10,25 +10,34 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
- .navbar .navbar-brand .title {
-    background-color: #212529;
+ .logo-text-container {
+   display: flex;
+   align-items: center;
+   background-color: #e3e3e3;
+   padding: 5px;
+   border-radius: 20px;
  }
+
+ /* .navbar .navbar-brand .title {
+    background-color: #ebebed;
+ } */
 
  .header-title {
     font-size: 4.5rem;
  }
 
  .telephone {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     font-family: 'Montserrat';
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
+    color: #fff;
+    background-color: #ffc800;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     -webkit-appearance: none;
@@ -52,6 +61,18 @@
    height: 250px;
    width : 100%;
  }
+
+ .PorteArrière {
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Utilise la couleur par défaut du texte */
+}
+
+.menuAdmin-item {
+   margin-right: 35px;
+   margin-top : 100px;
+   font-size: 1.3rem;
+ }
+ 
 
 
 

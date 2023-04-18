@@ -27,5 +27,5 @@ services:
     arguments:
       $targetDirectory: "%kernel.project_dir%/public/uploads"
 
-  App\Service\FilterCategory:
-    arguments: []
+  # App\Service\FilterCategory:
+  #   arguments: []
