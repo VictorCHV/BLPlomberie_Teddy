@@ -5,7 +5,6 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\WorksiteRepository;
 
-
 #[ORM\Entity(repositoryClass: WorksiteRepository::class)]
 class Worksite
 {
@@ -23,8 +22,8 @@ class Worksite
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $imageFilename = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $videoUrl = null;
+    // #[ORM\Column(length: 255, nullable: true)]
+    // private ?string $videoUrl = null;
 
     #[ORM\ManyToOne(inversedBy: 'worksites')]
     private ?Category $category = null;

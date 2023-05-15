@@ -38,7 +38,7 @@ class SecurityController extends AbstractController
             $user= $form->getData();
 
             //crypter le mot de passe
-            $cryptedPass= $hasher->hashPassword($user, $user->getPassword()); // c'est ici que le mdp ecrit en clair se transforme en hash
+            $cryptedPass= $hasher->hashPassword($user, $user->getPassword()); // c'est ici que le mdp en clair se transforme en hash
             $user->setPassword($cryptedPass);
 
             //Enregistrer l'utilisateur dans la DB

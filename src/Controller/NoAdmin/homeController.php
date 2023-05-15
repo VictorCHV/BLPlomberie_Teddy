@@ -14,7 +14,7 @@ use App\Service\FilterCategory;
 class homeController extends AbstractController
 {
     /**
-     * @Route("/accueil" , name="app_NoAdmin_home_home")
+     * @Route("/" , name="app_NoAdmin_home_home")
      */
     public function home(WorksiteRepository $repository): Response
     {
@@ -75,11 +75,11 @@ class homeController extends AbstractController
     // /**
     //  * @Route("/noadmin/home/showroom" , name="app_NoAdmin_home_showroom")
     //  */
-    // public function showroom(WorksiteRepository $repository, int $id): Response 
+    // public function showroom(WorksiteRepository $repository, int $id): Response
     // {
-       
+
     // $worksites= $repository->findTargetCategory($id);
-       
+
     //    return $this->render('no_admin/home/result.html.twig', [
     //     'worksites' => $worksites,
     // ]);
@@ -92,12 +92,12 @@ class homeController extends AbstractController
     {
         $twig_variable = 'some value';
         $result = $FilterCategory->showroom($repository, $id);
-        
+
         return $this->render('no_admin/home/home.html.twig', [
             'twig_variable' => $twig_variable
     ]);
     }
- 
+
 
     /**
      * @Route("/noadmin/home/informations_légales" , name="app_NoAdmin_home_legalInfo")
