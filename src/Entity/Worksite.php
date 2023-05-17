@@ -70,17 +70,17 @@ class Worksite
         return $this;
     }
 
-    public function getVideoUrl(): ?string
-    {
-        return $this->videoUrl;
-    }
+    // public function getVideoUrl(): ?string
+    // {
+    //     return $this->videoUrl;
+    // }
 
-    public function setVideoUrl(?string $videoUrl): self
-    {
-        $this->videoUrl = $videoUrl;
+    // public function setVideoUrl(?string $videoUrl): self
+    // {
+    //     $this->videoUrl = $videoUrl;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     public function getCategory(): ?Category
     {

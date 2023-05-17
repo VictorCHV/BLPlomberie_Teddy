@@ -81,7 +81,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Nos Chantiers</h2>
-                    <h3 class="section-subheading text-muted">Découvrez nos réalisations.</h3>
+                    <h3 class="section-subheading text-muted">Découvrez nos réalisations par catégorie de chantiers :</h3>
                 </div>
 
                 <div class="row">      
@@ -94,10 +94,12 @@
                                 </div>
                                 <img class="img-fluid" src="/images/bathPortfolio.jpg" alt="..." />
                             </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Salle de bain</div>
-                                {# <div class="portfolio-caption-subheading text-muted">Illustration</div> #}
-                            </div>
+                            <a data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">Salle de bain</div> 
+                                    {# <div class="portfolio-caption-subheading text-muted">Illustration</div> #}
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -109,10 +111,12 @@
                                 </div>
                                 <img class="img-fluid" src="/images/wcPortfolio.jpg" alt="..." />
                             </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">WC</div>
-                                {# <div class="portfolio-caption-subheading text-muted">Graphic Design</div> #}
-                            </div>
+                            <a data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">WC</div>
+                                    {# <div class="portfolio-caption-subheading text-muted">Graphic Design</div> #}
+                                </div>
+                            </a>    
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -124,10 +128,12 @@
                                 </div>
                                 <img class="img-fluid" src="/images/kitchenPortfolio.jpg" alt="..." />
                             </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Cuisine</div>
-                                {# <div class="portfolio-caption-subheading text-muted">Identity</div> #}
-                            </div>
+                            <a data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">Cuisine</div>
+                                    {# <div class="portfolio-caption-subheading text-muted">Identity</div> #}
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
@@ -139,10 +145,12 @@
                                 </div>
                                 <img class="img-fluid" src="/images/autrePortfolio.jpg" alt="..." />
                             </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Autre</div>
-                                {# <div class="portfolio-caption-subheading text-muted">Branding</div> #}
-                            </div>
+                            <a data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">Autre</div>
+                                    {# <div class="portfolio-caption-subheading text-muted">Branding</div> #}
+                                </div>
+                            </a>
                         </div>
                     </div>                   
                 </div>
@@ -247,14 +255,19 @@
                             <div class="form-group">
                                 <!-- Name input-->
                                 <div class="infoContact">Vous souhaitez un devis pour des travaux de plomberie, 
-                                chauffage ou pour une rénovation de salle de bain ?<br>
+                                chauffage, ou pour rénover votre salle de bain ?<br>
                                 Ou avez besoin d’un dépannage ? 
                                 </div>
-                                    <span class="telephone">
-                                    Téléphone : <br>06.59.82.04.01
-                                    <br>
-                                    <br>
-                                    Email : <br>louis.barlemont@gmail.com
+                                    <div class="coordonnees">
+                                        <i class="fa-solid fa-phone" style="color: #111;"></i>
+                                        <span class="text-telephone">
+                                        <p>Téléphone : 06.59.82.04.01</p>
+                                        </div>
+                                    <div class="coordonnees">
+                                        <i class="fa-solid fa-envelope" style="color: #111;"></i>
+                                        <span class="text-mail">
+                                        <p>Email : louis.barlemont@gmail.com</p>
+                                        </div>
                                     </span>
                             </div>      
                         </div>
@@ -359,7 +372,7 @@
 
                                         {% if worksite.imageFilename %}
                                         <p>              
-                                        <img src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
+                                        <img class="contenu-portfolio" src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
                                         {% endif %}
                                         </p>      
                                     {% endfor %} 
@@ -408,7 +421,7 @@
 
                                         {% if worksite.imageFilename %}
                                         <p>              
-                                        <img src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
+                                        <img class="contenu-portfolio" src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
                                         {% endif %}
                                         </p>      
                                     {% endfor %} 
@@ -456,7 +469,7 @@
 
                                         {% if worksite.imageFilename %}
                                         <p>              
-                                        <img src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
+                                        <img class="contenu-portfolio" src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
                                         {% endif %}
                                         </p>      
                                     {% endfor %} 
@@ -503,7 +516,7 @@
 
                                         {% if worksite.imageFilename %}
                                         <p>              
-                                        <img src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
+                                        <img class="contenu-portfolio" src="{{ asset ('uploads/' ~ worksite.imageFilename) }}" alt="{{ worksite.title }}" />
                                         {% endif %}
                                         </p>      
                                     {% endfor %} 
@@ -625,10 +638,6 @@
                                         Retour à l'accueil
                                     </button>
                                 </div>
-                                <br><br><br><br>
-                                {# ArrièrePorte #}
-                                - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-                                <a class="PorteArrière" href="{{ path ('app_login') }}">-</a>
                             </div>
                         </div>
                     </div>

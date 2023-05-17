@@ -11026,6 +11026,8 @@ header.masthead .masthead-heading {
   text-align: center;
   /*AVANT  background-color: #fff */
   background-color: #FFC800;
+  color: white;
+  text-decoration: none !important;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
   font-size: 1.5rem;

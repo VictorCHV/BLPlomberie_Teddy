@@ -21,7 +21,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class WorksiteController extends AbstractController
 {
     /**
-     * @Route("/admin/chantier/nouveau", name="app_worksite_create")
+     * @Route("/admin", name="app_worksite_create")
      */
     public function create(Request $request, FileUploader $fileUploader, WorksiteRepository $repository): Response
     {
