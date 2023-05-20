@@ -7,8 +7,12 @@
 <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-heading text-uppercase"><h1 class="seo"> Bienvenue <br>chez <br> BL Plomberie <h1></div>
-                <div class="masthead-subheading">Notre savoir-faire pour tous types d'ouvrages de plomberie sur la région de <strong>Bordeaux</strong></div>
+            <div class="bienvenue">
+            Bienvenue<br>chez
+            </div>
+                <div class="masthead-heading text-uppercase"><h1 class="seo">BL Plomberie<h1></div>
+                {# phrase d'accroche supprimée du "masthead-subheading" ci-dessous & ajout des <br> pour compenser l'espace #}
+                <div class="masthead-subheading"> <br><br><br></div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#contact">Contactez-nous</a>
             </div>
         </header>
@@ -18,12 +22,21 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Services</h2>
                     <h3 class="section-subheading text-muted">
-                        Fiables et professionnels, nous intervenons pour des prestations en installation, rénovation, dépannage.
+                        <div>
+                            <span style="color:var(--bs-primary);"><strong>Fiables et professionnels</strong></span> 
+                            <br>nous intervenons pour des prestations en installation, rénovation, dépannage.
+                        </div>
                         <br>
-                        L'écoute est la première étape de notre démarche orientée "satisfaction client". 
-                        Bien comprendre vos attentes est la clé pour des solutions adaptées à vos besoins. 
-                        Notre objectif : vous apporter un service de qualité et le meilleur résultat à des tarifs compétitifs.
-                    </h3>
+                        <div>
+                            <span style="color:var(--bs-primary);"><strong>À votre écoute </strong></span>
+                            <br>afin de connaître au mieux vos attentes et vous proposer des solutions adaptées à vos besoins.
+                        </div>
+                        <br>
+                        <div>
+                            <span style="color:var(--bs-primary);"><strong>Notre expertise</strong></span> 
+                            <br>pour vous offrir le meilleur résultat à des tarifs compétitifs.
+                        </div>
+                    </h3> 
                 </div>
 
                 <div class="row text-center">
@@ -38,14 +51,14 @@
                         <span class="fa-stack fa-4x">
                             <i class="fa-solid fa-faucet-drip"></i>
                         </span>
-                        <h4 class="my-3">Fuites d'eau (recherche & réparation)</h4>
+                        <h4 class="my-3">Fuites d'eau</h4>
                         {# <p class="text-muted"> -- zone de texte -- Fuites d'eau </p> #}
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fa-solid fa-bath"></i>
                         </span>
-                        <h4 class="my-3">Installation / Rénovation de Salle de bain</h4>
+                        <h4 class="my-3">Rénovation de Salle de bain</h4>
                         {# <p class="text-muted"> -- zone de texte -- Salle de bain </p> #}
                     </div>
                 </div>  
@@ -62,14 +75,14 @@
                         <span class="fa-stack fa-4x">
                             <i class="fa-solid fa-toilet"></i>
                         </span>
-                        <h4 class="my-3">Installation de WC (au sol / suspendu)</h4>
+                        <h4 class="my-3">Installation de WC</h4>
                         {# <p class="text-muted"> -- zone de texte -- WC </p> #}
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fa-solid fa-temperature-arrow-up"></i>
                         </span>
-                        <h4 class="my-3">Changement de Chauffe-eau, Ballons d'eau chaude</h4>
+                        <h4 class="my-3">Chauffe-eau, Ballons d'eau chaude</h4>
                         {# <p class="text-muted"> -- zone de texte --Chauffe-eau </p> #}
                     </div>
                 </div>
@@ -81,7 +94,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Nos Chantiers</h2>
-                    <h3 class="section-subheading text-muted">Découvrez nos réalisations par catégorie de chantiers :</h3>
+                    <h3 class="section-subheading text-muted">Nos réalisations par catégorie :</h3>
                 </div>
 
                 <div class="row">      
@@ -160,13 +173,12 @@
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Maintenance & Réseau d'artisans</h2>
-                    <h3 class="section-subheading text-muted">Nous proposons des contrats de maintenance. 
-                    Vos installations et équipements sont ainsi régulièrement entretenus, avec une vérification de leur bon fonctionnement et une mise à jour des normes de sécurité.
+                    <h2 class="section-heading text-uppercase">Nos +</h2>
+                    <h3 class="section-subheading text-muted">Notre offre de <span style="color:var(--bs-primary);"><strong>contrats de maintenance</strong></span> 
+                    vous apporte une vérification et un entretien régulier de vos installations, avec une mise à jour des normes de sécurité.
                     <br>
                     <br>
-                    <br>
-                    Disposant d'un large réseau d'artisans, nous vous accompagnons pour vous orienter vers nos partenaires dans les spécialités Electricité, Vitrage, et Maçonnerie.
+                    Disposant d'un large <span style="color:var(--bs-primary);"><strong>réseau d'artisans</strong></span>, nous vous accompagnons pour vous orienter vers nos partenaires dans les spécialités Electricité, Vitrage, et Maçonnerie.
                     </h3>
                 </div>
                 <!-- contenu timeline "About supprimé -->
@@ -255,8 +267,8 @@
                             <div class="form-group">
                                 <!-- Name input-->
                                 <div class="infoContact">Vous souhaitez un devis pour des travaux de plomberie, 
-                                chauffage, ou pour rénover votre salle de bain ?<br>
-                                Ou avez besoin d’un dépannage ? 
+                                chauffage, ou pour votre salle de bain ?<br>
+                                Besoin d’un dépannage urgent ?
                                 </div>
                                     <div class="coordonnees">
                                         <i class="fa-solid fa-phone" style="color: #111;"></i>
@@ -281,7 +293,7 @@
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div> #}
                              <div>
-                             <div class="infoContact"> Zone d'intervention :</div>
+                             <div class="infoContact"> <strong>Zone d'intervention :</strong></div>
                                 <div class="infoContact"> Bordeaux et communes voisines</div>
                                 <div class="map">
                                     <iframe 
@@ -318,7 +330,7 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023 </div>
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; bl-plomberie.fr </div>
                     {# <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -352,8 +364,7 @@
                                     <!-- Project details-->
                                     <h2 class="text-uppercase"> Galerie</h2>
                                     <p class="item-intro text-muted">Catégorie Salle de bain</p>
-                                    {# <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." /> #}
-                                    <p>Description & photos de nos chantiers :</p>
+                                    {# <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." /> #}       
                                     {# <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
@@ -405,7 +416,6 @@
                                     <h2 class="text-uppercase"> Galerie </h2>
                                     <p class="item-intro text-muted">Catégorie Sanitaire</p>
                                     {# <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." /> #}
-                                    <p>Description & photos de nos chantiers :</p>
                                     {# <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
@@ -453,7 +463,6 @@
                                     <h2 class="text-uppercase"> Galerie </h2>
                                     <p class="item-intro text-muted">Catégorie Cuisine</p>
                                     {# <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." /> #}
-                                    <p>Description & photos de nos chantiers :</p>
                                     {# <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
@@ -499,7 +508,6 @@
                                     <h2 class="text-uppercase"> Galerie </h2>
                                     <p class="item-intro text-muted">Catégorie Autres</p>
                                     {# <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." /> #}
-                                    <p>Description & photos de nos chantiers :</p>
                                     {# <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
